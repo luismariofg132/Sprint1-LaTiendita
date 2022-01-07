@@ -28,6 +28,10 @@ html{
     background-color: var(--bg);
 }
 
+.contenerdor-principal{
+    width: 100%;
+}
+
 /* estilos header */
 
 header{

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --white: #FEFEFE;
+    --malachine: #0AC763;
+    --silver: #BDBCBC;
+    --cocoa-brown: #332927;
+    --black: #333333;
+    --boulder: #B8B4B4;
+    --scarlet: #FF1F18;
+    --cobalt: #0252BC;
+    --bg: #FAFAF8;
+    --purple: #5E18BB;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--bg);
+}
+
+/* estilos header */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--white);
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 24px 40px;  
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header .logo a{
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--scarlet);
+}
+
+header nav li .lgUbicacion{
+    color: var(--scarlet);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+header nav li button{
+    background-color: var(--malachine);
+    color: var(--white);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 5vw;
+    height: 4vh;
+}
+
+header nav li button:active{
+    background-color: var(--malachine);
+    opacity: 0.7;
+}
+
+header nav li{
+    margin-left: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+#container .imgtitle img{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 90vw;
+    height: 35vh;
+    border-radius: 16px;
+}
+
+#container .imgtitle p{
+    position: absolute;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 28px;
+    left: 285px;
+    top: 170px;
+}
+
+/* Productos en oferta y populares */
+.ofertas, .populares{
+    margin: 40px;
+    padding: 20px;
+    box-shadow: -2px 13px 17px -3px rgba(0,0,0,0.62);
+}
+
+h2{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 24px 40px;
+    padding-bottom: 0;
+}
+
+.ofertas .descuento{
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--silver);
+    color: var(--purple);
+    padding: 4px;
+    border-radius: 10px;
+}
+.precio{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ofertas .precio span{
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.ofertas p, .populares p{
+    font-size: 14px;
+}
+
+.btnAgregar{
+    background-color: var(--malachine);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 5vh;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.btnAgregar:active, #pago:active{
+    background-color: var(--malachine);
+    opacity: 0.7;
+}
+
+.ofertas, .populares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+/* modal carrito de compras */
+#modal-car{
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 40vw;
+    height: 100vh;
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 60vw;
+	z-index: 3;
+	opacity: 0;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+    overflow: auto
+}
+
+#modal-car:target{
+    opacity:1;
+	pointer-events: auto;
+}
+
+#header-modal-car{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 24px 25px;  
+}
+
+#header-modal-car a{
+    font-size: 24px;
+    color: var(--black);
+}
+
+#header-modal-car span{
+    font-weight: bold;
+}
+
+.product-modal{
+    padding-bottom: 40px;
+}
+
+.product-modal img{
+    width: 7vw;
+}
+
+.product-modal .producto{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: var(--white);
+}
+
+.product-modal .info-producto{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-producto div{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 5px;
+    line-height: 2em;
+    padding: 0px;
+}
+
+.product-modal .cantidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cantidad a{
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botones{
+    background-color: var(--white);
+    position: fixed;
+    bottom: 0;
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones button{
+    border: none;
+    border-radius: 8px;
+    width: 15vw;
+    height: 5vh;
+}
+
+.botones  #pago{
+    background-color: var(--malachine);
+    color: var(--white);
+}
+
+.botones #vaciar{
+    background-color: var(--silver);
+    color: var(--black);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>La tiendita</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <span class="logo"><a href="index.html">Tiendita</a></span>
+        <nav>
+            <ul>
+                <li id="ubicación"><i class="bi bi-geo-alt lgUbicacion"></i>ubicación</li>
+                <li><button id="btnCar"><i class="bi bi-cart2"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenedor -->
+    <section id="container">
+        <!-- imagen de portada  -->
+        <div class="imgtitle">
+            <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641439218/Sprint%201/estante.jpg"
+                alt="estante frutas y verduras">
+            <p>¡Adquiere todos tus productos favoritos al mejor precio!</p>
+        </div>
+        <!-- Productos en oferta -->
+        <h2>Ofertas</h2>
+        <section class="ofertas" id="productOferta">
+            <div>
+                <span class="descuento">-20%</span>
+                <div class="product">
+                    <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641436680/Sprint%201/Name_Limon_mwosop.jpg"
+                        alt="Limon">
+                    <div class="precio">&#36; 26.82/Kg <span>&#36; 36.9/Kg</span></div>
+                    <p>Limon con semillas</p>
+                </div>
+
+                <button class="btnAgregar">Agregar</button>
+            </div>
+        </section>
+        <!-- Productos Populares  -->
+        <h2>Los más populares</h2>
+        <section class="populares" id="productPopular">
+            <div>
+                <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641437122/Sprint%201/Name_Colgate_pz8v8k.jpg"
+                    alt="">
+                <div class="precio">&#36; 26.82/Kg</div>
+                <p>Crema Colgate</p>
+                <button class="btnAgregar">Agregar</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- modal carrito de compras -->
+    <section id="modal-car">
+        <div id="header-modal-car">
+            <p>Entregar en <span>Filandia-Quindio</span></p>
+            <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
+        </div>
+        <div class="product-modal" id="producto-car">
+
+        </div>
+        <div class="botones">
+            <button id="vaciar">Vaciar canasta</button>
+            <button id="pago"></button>
+        </div>
+        </div>
+    </section>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

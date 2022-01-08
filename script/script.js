@@ -81,7 +81,8 @@ const addOferta = async (idP) => {
         id: id,
         nombre: nombre,
         precio: precioFinal,
-        imagen: imagen
+        imagen: imagen,
+        cantidad: 1
     }
 
     productosCar.unshift(Producto)
@@ -99,7 +100,8 @@ const addPopular = async (idP) => {
         id: id,
         nombre: nombre,
         precio: precio,
-        imagen: imagen
+        imagen: imagen,
+        cantidad: 1
     }
 
     productosCar.unshift(Producto)

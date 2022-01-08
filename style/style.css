@@ -170,7 +170,7 @@ h2{
 /* modal carrito de compras */
 #modal-car{
     background: rgba(255, 255, 255, 0.8);
-    max-width: 40vw;
+    max-width: 40%;
     height: 100vh;
     position: fixed;
 	top: 0;

@@ -353,6 +353,6 @@ h2{
     .modal-ubicacion-informacion{
         max-width: 90%;
         margin-top: 10%;
-    
+        padding: 16px;
     }
 }

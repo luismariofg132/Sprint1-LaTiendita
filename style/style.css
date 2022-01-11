@@ -46,8 +46,6 @@ header{
 
 header nav ul{
     list-style: none;
-    display: flex;
-    flex-direction: row;
 }
 
 header .logo a{
@@ -82,7 +80,8 @@ header nav li button:active{
 header nav li{
     text-transform: capitalize;
     font-weight: bold;
-    min-width: 80%;
+    display: inline;
+    padding: 0 3px;
 }
 
 /* Productos en oferta y populares */

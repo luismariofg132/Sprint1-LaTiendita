@@ -89,6 +89,10 @@ header nav li{
     margin: 40px;
     padding: 20px;
     box-shadow: -2px 13px 17px -3px rgba(0,0,0,0.62);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
 }
 
 h2{
@@ -138,13 +142,6 @@ h2{
 .btnAgregar:active, #pago:active{
     background-color: var(--malachine);
     opacity: 0.7;
-}
-
-.ofertas, .populares{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
 }
 
 
@@ -281,5 +278,10 @@ h2{
 
     .botones{
         width: 100%;
+    }
+
+    .ofertas, .populares{
+        display: flex;
+        justify-content: center;
     }
 }

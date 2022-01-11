@@ -278,4 +278,8 @@ h2{
         position: fixed;
         left: 0;
     }
+
+    .botones{
+        width: 100%;
+    }
 }

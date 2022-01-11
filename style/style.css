@@ -85,25 +85,6 @@ header nav li{
     font-weight: bold;
 }
 
-
-#container .imgtitle img{
-    position: relative;
-    display: block;
-    margin: auto;
-    width: 90vw;
-    height: 35vh;
-    border-radius: 16px;
-}
-
-#container .imgtitle p{
-    position: absolute;
-    color: var(--white);
-    font-weight: bold;
-    font-size: 28px;
-    left: 285px;
-    top: 170px;
-}
-
 /* Productos en oferta y populares */
 .ofertas, .populares{
     margin: 40px;
@@ -117,6 +98,7 @@ h2{
     padding: 24px 40px;
     padding-bottom: 0;
 }
+
 
 .ofertas .descuento{
     font-size: 12px;
@@ -170,13 +152,13 @@ h2{
 /* modal carrito de compras */
 #modal-car{
     background: rgba(255, 255, 255, 0.8);
-    max-width: 40%;
+    min-width: 40%;
     height: 100vh;
     position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 60vw;
+	left: 60%;
 	z-index: 3;
 	opacity: 0;
 	transition: opacity 400ms ease-in;
@@ -212,7 +194,7 @@ h2{
 }
 
 .product-modal img{
-    width: 7vw;
+    width: 25%;
 }
 
 .product-modal .producto{
@@ -253,7 +235,7 @@ h2{
     background-color: var(--white);
     position: fixed;
     bottom: 0;
-    width: 40vw;
+    width: 40%;
     height: 10vh;
     display: flex;
     justify-content: space-evenly;
@@ -262,7 +244,7 @@ h2{
 .botones button{
     border: none;
     border-radius: 8px;
-    width: 15vw;
+    width: 40%;
     height: 5vh;
 }
 
@@ -274,4 +256,26 @@ h2{
 .botones #vaciar{
     background-color: var(--silver);
     color: var(--black);
+}
+
+/* media queris */
+
+@media screen and (max-width: 992px){
+    #modal-car{
+        min-width: 70%;
+        position: fixed;
+        left: 30%;
+    }
+
+    .botones{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #modal-car{
+        min-width: 100%;
+        position: fixed;
+        left: 0;
+    }
 }

@@ -130,7 +130,7 @@ const showCarro = () => {
         `
     })
     let total = productosCar.reduce((sum, value) => (typeof value.precio == "number" ? sum + value.precio : sum), 0)
-    pago.innerHTML += `<p>Ir a pagar &#36; ${total}</p>`
+    pago.textContent = `Ir a pagar $ ${total}`
 }
 
 vaciar.addEventListener('click', () => {

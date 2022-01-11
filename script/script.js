@@ -1,5 +1,5 @@
-const API_OFERTAS = 'http://localhost:4000/ofertas/'
-const API_POPULARES = 'http://localhost:4000/populares/'
+const API_OFERTAS = 'https://peaceful-ocean-61738.herokuapp.com/ofertas/'
+const API_POPULARES = 'https://peaceful-ocean-61738.herokuapp.com/populares/'
 let productosCar = JSON.parse(localStorage.getItem('ProductosCarro')) || []
 const productoComprar = document.getElementById('producto-car')
 const oferta = document.getElementById('productOferta')

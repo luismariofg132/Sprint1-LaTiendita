@@ -41,7 +41,7 @@ header{
     background-color: var(--white);
     margin-bottom: 10px;
     align-items: center;
-    padding: 24px 40px;  
+    padding: 2% 4%;  
 }
 
 header nav ul{
@@ -239,6 +239,7 @@ h2{
     height: 10vh;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .botones button{

@@ -135,5 +135,5 @@ const showCarro = () => {
 
 vaciar.addEventListener('click', () => {
     localStorage.removeItem('ProductosCarro')
-    window.location.reload()
+    window.location.href = "index.html"
 })

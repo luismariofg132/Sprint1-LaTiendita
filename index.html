@@ -21,7 +21,8 @@
             <span class="logo"><a href="index.html">Tiendita</a></span>
             <nav>
                 <ul>
-                    <li id="ubicación"><i class="bi bi-geo-alt lgUbicacion"></i>ubicación</li>
+                    <li id="ubicación"><a href="#modal-ubicacion"><i class="bi bi-geo-alt lgUbicacion"></i>Ubicación</a>
+                    </li>
                     <li><button id="btnCar" class="mt-1"><i class="bi bi-cart2"></i></button></li>
                 </ul>
             </nav>
@@ -74,6 +75,27 @@
             <button id="pago"></button>
         </div>
         </div>
+    </section>
+
+    <section id="modal-ubicacion">
+        <div class="modal-ubicacion-informacion">
+            <div id="header-modal-ubicacion">
+                <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
+            </div>
+            <div id="ubicacion-modal">
+                <span>¿Dónde quieres recibir tu pedido?</span>
+                <p>Para poder ofrecerte productos dentro de tu area, nececitasmos tu ubicación</p>
+            </div>
+            <div id="ubicaciones">
+                <select name="ubicacion" id="select-ubi">
+                    <option value="0"><i class="bi bi-geo-alt"></i>Alli arribita</option>
+                </select>
+            </div>
+            <div>
+                <button id="btnUbicacion">Aceptar</button>
+            </div>
+        </div>
+
     </section>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

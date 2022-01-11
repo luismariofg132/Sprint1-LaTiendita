@@ -70,8 +70,8 @@ header nav li button{
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    width: 5vw;
-    height: 4vh;
+    width: 2.5em;
+    height: auto;
 }
 
 header nav li button:active{
@@ -80,9 +80,9 @@ header nav li button:active{
 }
 
 header nav li{
-    margin-left: 15px;
     text-transform: capitalize;
     font-weight: bold;
+    min-width: 80%;
 }
 
 /* Productos en oferta y populares */

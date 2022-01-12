@@ -10,7 +10,7 @@ const select = document.getElementById('select-ubi')
 const pago = document.getElementById('pago')
 const fragmentSelect = document.createDocumentFragment()
 const btnUbicacion = document.getElementById('btnUbicacion')
-
+const ubicacionModal = document.getElementById('ubicacion-modal')
 
 document.addEventListener('DOMContentLoaded', () => {
     getOfertas(API_OFERTAS)
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     else {
         ubicacion.textContent = LSUbicacion.ciudad
+        ubicacionModal.textContent = LSUbicacion.ciudad
     }
 })
 

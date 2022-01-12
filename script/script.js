@@ -1,23 +1,31 @@
 const API_OFERTAS = 'https://peaceful-ocean-61738.herokuapp.com/ofertas/'
 const API_POPULARES = 'https://peaceful-ocean-61738.herokuapp.com/populares/'
+const API_UBICACIONES = 'https://peaceful-ocean-61738.herokuapp.com/uicaciones/'
 let productosCar = JSON.parse(localStorage.getItem('ProductosCarro')) || []
+let LSUbicacion = JSON.parse(localStorage.getItem('ubicacion')) || ""
 const productoComprar = document.getElementById('producto-car')
 const oferta = document.getElementById('productOferta')
 const popular = document.getElementById('productPopular')
-const btnCar = document.getElementById('btnCar')
-const vaciar = document.getElementById('vaciar')
+const select = document.getElementById('select-ubi')
 const pago = document.getElementById('pago')
+const fragmentSelect = document.createDocumentFragment()
+const btnUbicacion = document.getElementById('btnUbicacion')
+
 
 document.addEventListener('DOMContentLoaded', () => {
     getOfertas(API_OFERTAS)
     getPopulares(API_POPULARES)
     showCarro();
+    getUbicaciones(API_UBICACIONES)
+    if (LSUbicacion == "") {
+        window.location.href = "#modal-ubicacion"
+    }
+
+    else {
+        ubicacion.textContent = LSUbicacion.ciudad
+    }
 })
 
-btnCar.addEventListener('click', () => {
-    window.location.href = "#modal-car"
-    window.location.reload()
-})
 
 const getOfertas = async (ofertas) => {
     const busq = await fetch(ofertas)
@@ -33,7 +41,12 @@ const getPopulares = async (populares) => {
     showPopulares(data)
 }
 
+const getUbicaciones = async (ubicaciones) => {
+    const busq = await fetch(ubicaciones)
+    const data = await busq.json()
 
+    showUbicaiones(data)
+}
 
 const showOfertas = (ofertas) => {
     oferta.innerHTML = ""
@@ -133,7 +146,36 @@ const showCarro = () => {
     pago.textContent = `Ir a pagar $ ${total}`
 }
 
-vaciar.addEventListener('click', () => {
-    localStorage.removeItem('ProductosCarro')
-    window.location.href = "index.html"
+const showUbicaiones = (ubicaciones) => {
+    ubicaciones.forEach(element => {
+        const { id, ciudad } = element
+        const option = document.createElement('option')
+        option.setAttribute('value', id)
+        option.textContent = ciudad
+        fragmentSelect.appendChild(option)
+    })
+
+    select.appendChild(fragmentSelect)
+}
+
+btnUbicacion.addEventListener('click', () => {
+    let ubicacion = document.getElementById('select-ubi')
+    let ubicacionSelect = ubicacion.options[ubicacion.selectedIndex].value;
+
+    if (ubicacionSelect == 0) {
+        window.location.href = "#cerrar"
+    }
+    else {
+        guardarUbicacion(ubicacionSelect)
+        window.location.href = "#cerrar"
+    }
 })
+
+const guardarUbicacion = async (indexUbicacion) => {
+    const busq = await fetch(API_UBICACIONES + indexUbicacion)
+    const resp = await busq.json()
+
+    localStorage.setItem('ubicacion', JSON.stringify(resp))
+    window.location.reload()
+}
+

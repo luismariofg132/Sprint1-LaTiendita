@@ -46,14 +46,16 @@ header{
 
 header nav ul{
     list-style: none;
+    cursor: pointer;
 }
 
-header .logo a{
+header .logo {
     font-family: 'Inter';
     font-style: italic;
     font-weight: bold;
     font-size: 22px;
     color: var(--scarlet);
+    cursor: pointer;
 }
 
 header nav li .lgUbicacion{

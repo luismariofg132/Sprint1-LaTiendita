@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>CRUD-Productos</title>
+</head>
+
+<body>
+    <header>
+        <i class="bi bi-arrow-left-circle-fill" id="volver">Volver</i>
+    </header>
+    <section id="CRUDProduts">
+        <form id="formCRUD">
+            <div>
+                <label for="nameProduct">Nombre del producto</label>
+                <input type="text" name="nameProduct" id="nameProduct" placeholder="Ejemplo: Crema Colgate">
+            </div>
+            <div>
+                <label for="precioProduct">Precio del producto</label>
+                <input type="number" name="precioProduct" id="precioProduct" placeholder="Ejemplo: 35.5">
+            </div>
+            <div>
+                <label for="precioInicial">Precio Original</label>
+                <input type="number" name="precioInicial" id="precioInicial" placeholder="Ejemplo: 38.7">
+            </div>
+            <div>
+                <label for="urlImagen">Url de la imagen</label>
+                <input type="tel" name="urlImagen" id="urlImagen" placeholder="Ejemplo: https://imagen.jpg">
+            </div>
+            <div>
+                <input type="number" name="id" id="id">
+            </div>
+            <button id="buscarProduct">Buscar</button>
+            <button id="agregarProduct">Agregar Oferta</button>
+        </form>
+    </section>
+
+    <section id="resultProdut">
+        <div>
+            <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641436674/Sprint%201/Name_Nopal_knbh0g.jpg"
+                alt="">
+        </div>
+        <div>
+            <h4>Crema Colgate</h4>
+            <span>35.5</span>
+            <span>38.7</span>
+        </div>
+        <div>
+            <button id="btnEditar">Editar</button>
+            <button id="btnEliminar">Eliminar</button>
+        </div>
+    </section>
+
+    <script src="script/crud.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

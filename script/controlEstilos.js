@@ -3,6 +3,12 @@ const vaciar = document.getElementById('vaciar')
 const ubicacion = document.getElementById('ubicación')
 const titulo = document.querySelector('.logo')
 const pago = document.getElementById('pago')
+const btnSettings = document.getElementById('btnSettings')
+
+
+btnSettings.addEventListener('click', () => {
+    window.location.href = "CRUD.html"
+})
 
 titulo.addEventListener('click', () => {
     window.location.href = "index.html"

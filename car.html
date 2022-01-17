@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Carrito de compras</title>
+</head>
+
+<body>
+    <header>
+        <i class="bi bi-arrow-left-circle-fill" id="volver">Volver</i>
+    </header>
+    <section id="grid">
+        <section id="carritoCompras">
+            <div class="productosCarrito">
+                <div class="infoProductoCarP2">
+                    <div class="infoProductoP2">
+                        <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641436680/Sprint%201/Name_Limon_mwosop.jpg"
+                            alt="">
+                        <div>
+                            <p>Aguacate</p>
+                            <h4>&#36; 1000</h4>
+                        </div>
+                    </div>
+                    <div class="cantidadP2">
+                        <a><i class="bi bi-plus-lg"></i></a>
+                        <h4>2 Und</h4>
+                        <a><i class="bi bi-dash-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="informacionPago">
+            <div class="formPago">
+                <form id="formPago">
+                    <div>
+                        <label for="email">Correo Electronico</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="numberCard">Información de la targeta</label>
+                        <input type="number" name="numberCard" id="numberCard" placeholder="1234 1234 1234 1234">
+                        <input type="number" name="expirationDate" id="expirationDate" placeholder="MM/YY">
+                        <input type="number" name="cvc" id="cvc" placeholder="CVC">
+                    </div>
+                    <div>
+                        <label for="nameCard">Nombre en la targeta</label>
+                        <input type="text" name="nameCard" id="nameCard">
+                    </div>
+                    <button id="pagoTotal">pagar</button>
+                </form>
+            </div>
+        </section>
+    </section>
+    <script src="script/car.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

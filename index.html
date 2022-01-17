@@ -35,28 +35,12 @@
 
             </div>
             <h2>Ofertas</h2>
+            <!-- Productos oferta  -->
             <section class="ofertas" id="productOferta">
-                <div>
-                    <span class="descuento">-20%</span>
-                    <div class="product">
-                        <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641436680/Sprint%201/Name_Limon_mwosop.jpg"
-                            alt="Limon">
-                        <div class="precio">&#36; 26.82/Kg <span>&#36; 36.9/Kg</span></div>
-                        <p>Limon con semillas</p>
-                    </div>
-                    <button class="btnAgregar">Agregar</button>
-                </div>
             </section>
             <!-- Productos Populares  -->
             <h2>Los más populares</h2>
             <section class="populares" id="productPopular">
-                <div>
-                    <img src="https://res.cloudinary.com/ddgyxfetd/image/upload/v1641437122/Sprint%201/Name_Colgate_pz8v8k.jpg"
-                        alt="">
-                    <div class="precio">&#36; 26.82/Kg</div>
-                    <p>Crema Colgate</p>
-                    <button class="btnAgregar">Agregar</button>
-                </div>
             </section>
         </section>
     </div>
@@ -73,9 +57,9 @@
             <button id="vaciar">Vaciar canasta</button>
             <button id="pago"></button>
         </div>
-        </div>
     </section>
 
+    <!-- modal ubicacion -->
     <section id="modal-ubicacion">
         <div class="modal-ubicacion-informacion">
             <div id="header-modal-ubicacion">
@@ -93,14 +77,26 @@
                 <button id="btnUbicacion">Aceptar</button>
             </div>
         </div>
+    </section>
 
+    <!-- modal producto -->
+    <section id="modal-producto">
+        <div class="modal-pruducto-informacion">
+            <div id="header-modal-producto">
+                <a href="#cerrar" class="cerrar"><i class="bi bi-x-circle-fill"></i></a>
+            </div>
+            <div class="modal-producto-datos">
+
+            </div>
+        </div>
     </section>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
-    <script src="script/controlEstilos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script/script.js" type="module"></script>
+    <script src="script/controlEstilos.js" type="module"></script>
 </body>
 
 </html>

@@ -482,7 +482,7 @@ h2{
     padding: 9px 12px;
 }
 
-#pagoTotal, #buscarProduct, #agregarProduct{
+#pagoTotal, #buscarProduct, #agregarProduct, .botonOpcion{
     background-color: var(--malachine);
     color: var(--white);
     display: flex;
@@ -498,15 +498,23 @@ h2{
     box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
 }
 
-#CRUDProduts, #resultProdut{
+#CRUDProduts, #resultado{
     width: 90%;
     background-color: var(--white);
     margin: auto;
+    margin-bottom: 10px;
 }
 
-#formCRUD{
+#formCRUD, #resultProdut{
     width: 60%;
     margin: auto;
+}
+
+#resultProdut span{
+    display: block;
+}
+.resultimagen img{
+    width: 40%;   
 }
 
 /* media queris */
@@ -578,4 +586,12 @@ h2{
         font-size: 13px;
     }
     
+    .resultimagen img{
+        width: 80%;   
+    }
+
+    #formCRUD, #resultProdut{
+        width: 90%;
+        margin: auto;
+    }
 }

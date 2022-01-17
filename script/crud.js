@@ -22,18 +22,18 @@ btnBuscar.addEventListener('click', async (e) => {
     const { id, nombre, precio, precioInicial, imagen } = result
     resultProdut.innerHTML = ""
     resultProdut.innerHTML += `
-        <div>
+        <div class="resultimagen">
             <img src="${imagen}" alt="">
                 
         </div>
         <div>
-            <h4>${nombre}</h4>
-            <span>${precio}</span>
-            <span>${precioInicial}</span>
+            <h4>Nombre del producto: ${nombre}</h4>
+            <span>Precio final: ${precio}</span>
+            <span>Precio inicial ${precioInicial}</span>
         </div>
         <div>
-            <button onclick="editar(${id})">Editar</button>
-            <button onclick="eliminar(${id})">Eliminar</button>
+            <button onclick="editar(${id})" class="botonOpcion">Editar</button>
+            <button onclick="eliminar(${id})" class="botonOpcion">Eliminar</button>
         </div>
     
     `
@@ -63,11 +63,32 @@ btnAgregar.addEventListener('click', async (e) => {
             "Content-Type": "application/json; charset=UTF-8"
         }
     })
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto Añadido',
+        confirmButtonColor: '#0AC763',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "index.html"
+        }
+    })
+
 })
 
 const eliminar = async (idP) => {
     let resp = await fetch(endPointOferta + idP, {
         method: 'DELETE'
+    })
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto Eliminado',
+        confirmButtonColor: '#0AC763',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "index.html"
+        }
     })
 }
 
@@ -87,6 +108,16 @@ const editar = async (idP) => {
         }),
         headers: {
             "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto Actualizado',
+        confirmButtonColor: '#0AC763',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "index.html"
         }
     })
 }

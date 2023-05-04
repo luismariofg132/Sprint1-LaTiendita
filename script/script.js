@@ -1,6 +1,6 @@
-const API_OFERTAS = 'https://peaceful-ocean-61738.herokuapp.com/ofertas/'
-const API_POPULARES = 'https://peaceful-ocean-61738.herokuapp.com/populares/'
-const API_UBICACIONES = 'https://peaceful-ocean-61738.herokuapp.com/uicaciones/'
+const API_OFERTAS = 'https://la-tiendita-bk.lfrancodev.com/ofertas/'
+const API_POPULARES = 'https://la-tiendita-bk.lfrancodev.com/populares/'
+const API_UBICACIONES = 'https://la-tiendita-bk.lfrancodev.com/uicaciones/'
 let productosCar = JSON.parse(localStorage.getItem('ProductosCarro')) || []
 let LSUbicacion = JSON.parse(localStorage.getItem('ubicacion')) || ""
 const productoComprar = document.getElementById('producto-car')

@@ -1,6 +1,6 @@
 const btnBuscar = document.getElementById('buscarProduct')
 const btnAgregar = document.getElementById('agregarProduct')
-const endPointOferta = 'https://peaceful-ocean-61738.herokuapp.com/ofertas/'
+const endPointOferta = 'https://la-tiendita-bk.lfrancodev.com/ofertas/'
 const resultProdut = document.getElementById('resultProdut')
 const btnVolver = document.getElementById('volver')
 
